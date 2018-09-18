@@ -1,5 +1,4 @@
 server:
-  #port: 8888
   port: 8878
 spring:
   cloud:
@@ -11,8 +10,13 @@ spring:
           password: nijie119504
   application:
     name: config-server
-    
-    
-    
-    
-  
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://192.168.169.128:8080/my.demo/eureka/
+management:
+  security:
+    enabled: false
