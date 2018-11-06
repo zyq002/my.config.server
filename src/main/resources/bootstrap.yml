@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zyq002/my.config.git
+          username: zyq002
+          password: nijie119504
+  application:
+    name: config-server
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.169.128:8080/my.demo/eureka/
+  instance:
+    prefer-ip-address: true
+    
+ 
+#management:
+  #security:
+    #enabled: false
