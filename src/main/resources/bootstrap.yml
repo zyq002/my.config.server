@@ -1,3 +1,7 @@
+
+#server:
+ # port: 8888
+ 
 spring:
   cloud:
     config:
@@ -6,8 +10,8 @@ spring:
           uri: https://github.com/zyq002/my.config.git
           username: zyq002
           password: nijie119504
-  application:
-    name: config-server
+  #application:
+    #name: config-server
     
 eureka:
   client:
