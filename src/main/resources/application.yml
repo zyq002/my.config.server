@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zyq002/my.config.server
+          username: zyq002
+          password: nijie119504
+        #  search-paths: null
+        
