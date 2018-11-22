@@ -1,4 +1,9 @@
+server:
+  port: 8080
+  context-path: /my.config.server 
 spring:
+  application:
+    name: my.config.server 
   cloud:
     config:
       server:
@@ -6,17 +11,16 @@ spring:
           uri: https://github.com/zyq002/my.config.git
           username: zyq002
           password: nijie119504
-  #application:
-    #name: config-server
-    
+          search-paths:
+          - dev
 eureka:
   client:
     service-url:
       defaultZone: http://192.168.169.128:8080/my.demo/eureka/
-  instance:
-    prefer-ip-address: true
-    
- 
-#management:
-  #security:
-    #enabled: false
+    instance:
+      refer-ip-address: true
+management:
+  security:
+    enabled: false
+#server:
+  #port: 8888
